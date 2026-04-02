@@ -2,29 +2,26 @@
    GLOBAL RESET & BASE
 ========================= */
 * {
-  margin: 0;
-  padding: 0;
+  padding: 0 20px;
+  margin: 0 0;
   box-sizing: border-box;
 }
-
-/* FIX 1: Removed * { transition: all } 
-   Applying transitions to everything causes massive lag and bugs. 
-   Apply them specifically to elements that need them instead. */
 
 body {
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
   background: #fdf6f9;
   color: #5a4a4a;
   line-height: 1.6;
-  overflow-x: hidden; /* Prevents accidental horizontal scroll */
+  overflow-x: hidden; 
+
 }
 
 /* =========================
    TYPOGRAPHY
 ========================= */
-h1 { font-size: 2.5rem; font-weight: 700; color: #ff7aa2; margin-bottom: 0.5rem; }
-h2 { font-size: 1.8rem; font-weight: 600; color: #ff9bb8; margin-bottom: 15px; }
-h3 { font-size: 1.2rem; font-weight: 600; }
+h1 { font-size: 2.5rem; font-weight: 700; color: #ff7aa2; margin-bottom: 0.5rem;}
+h2 { font-size: 1.8rem; font-weight: 600; color: #ff9bb8; margin-bottom: 15px;}
+h3 { font-size: 1.2rem; font-weight: 600;}
 p { font-size: 1rem; color: #6b5b5b; margin-bottom: 1rem; }
 
 /* =========================
@@ -34,7 +31,7 @@ nav {
   display: flex;
   position: sticky;
   top: 0;
-  z-index: 1000; /* FIX 2: Added z-index so content doesn't scroll OVER the nav */
+  z-index: 1000; 
   justify-content: space-between;
   align-items: center;
   background: rgba(255, 214, 224, 0.95); /* Slight transparency looks premium */
@@ -53,6 +50,10 @@ nav a {
   color: #5a4a4a;
   font-weight: 600;
   transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
 }
 
 nav a:hover { color: #ff7aa2; }
@@ -71,18 +72,35 @@ nav a:hover { color: #ff7aa2; }
   padding: 80px 20px;
   background: #ffeaf4;
   border-bottom: 2px dashed #ffc2d1;
-  animation: fadeIn 0.8s ease-out; /* Moved animation here for better UX */
+  animation: fadeIn 0.8s ease-out;
+   /* Moved animation here for better UX */:;
+  -webkit-animation: fadeIn 0.8s ease-out;
 }
 
 /* =========================
    COMPONENTS (Cards & Buttons)
 ========================= */
+#smart-plan {
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .card, .smart-card, .team-card {
   background: #ffffff;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(255, 182, 193, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
+  -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover, .team-card:hover {
@@ -131,8 +149,6 @@ nav a:hover { color: #ff7aa2; }
    FOOTER
 ========================= */
 footer {
-  /* FIX 3: Changed from sticky to standard padding. 
-     Sticky footers usually hide content on small screens. */
   text-align: center;
   padding: 40px 20px;
   background: #ffd6e0;
