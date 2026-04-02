@@ -73,7 +73,6 @@ nav a:hover { color: #ff7aa2; }
   background: #ffeaf4;
   border-bottom: 2px dashed #ffc2d1;
   animation: fadeIn 0.8s ease-out;
-   /* Moved animation here for better UX */:;
   -webkit-animation: fadeIn 0.8s ease-out;
 }
 
@@ -93,10 +92,6 @@ nav a:hover { color: #ff7aa2; }
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(255, 182, 193, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
   -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
   -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
   -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
